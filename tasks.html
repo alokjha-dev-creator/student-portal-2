@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i
+                            class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li class="nav-item"><a href="attendance.html" class="nav-link"><i
+                            class="fa-regular fa-calendar-check"></i><span>Attendance</span></a></li>
+                <li class="nav-item"><a href="marks.html" class="nav-link"><i
+                            class="fa-solid fa-chart-simple"></i><span>Marks & CGPA</span></a></li>
+                <li class="nav-item"><a href="lectures.html" class="nav-link"><i
+                            class="fa-solid fa-person-chalkboard"></i><span>Lectures</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link active"><i
+                            class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>My Tasks</h1>
+                    <p>Stay organized and never miss a deadline.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn flex-center"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                            alt="User" /></div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="glass-panel stat-card">
+                    <h3>Pending Tasks</h3>
+                    <div class="stat-value text-gradient">4</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">2 High Priority</p>
+                </div>
+                <div class="glass-panel stat-card">
+                    <h3>Completed</h3>
+                    <div class="stat-value">12</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">This Week</p>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="padding: 24px;">
+                <div class="section-header">
+                    <h2>To-Do List</h2>
+                    <button class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 16px;"><i
+                            class="fa-solid fa-plus"></i> New Task</button>
+                </div>
+
+                <div class="task-list">
+                    <!-- High Priority -->
+                    <div class="task-item glass-panel" style="border: 1px solid rgba(239, 68, 68, 0.3);">
+                        <div class="checkbox-custom"><i class="fa-solid fa-check"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 4px;">Submit DBMS Project Report</h4>
+                            <p style="font-size: 0.85rem; color: var(--color-danger);">Due Tomorrow, 11:59 PM</p>
+                        </div>
+                        <span class="status-badge"
+                            style="background: rgba(239, 68, 68, 0.2); color: var(--color-danger);">High</span>
+                    </div>
+
+                    <!-- Medium Priority -->
+                    <div class="task-item glass-panel">
+                        <div class="checkbox-custom"><i class="fa-solid fa-check"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 4px;">Prepare for Physics Lab</h4>
+                            <p style="font-size: 0.85rem; color: var(--color-secondary);">Due Friday</p>
+                        </div>
+                        <span class="status-badge"
+                            style="background: rgba(245, 158, 11, 0.2); color: var(--color-secondary);">Medium</span>
+                    </div>
+
+                    <!-- Normal Priority -->
+                    <div class="task-item glass-panel">
+                        <div class="checkbox-custom"><i class="fa-solid fa-check"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 4px;">Settle Cafe Bill</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">No Deadline</p>
+                        </div>
+                        <span class="status-badge">Low</span>
+                    </div>
+
+                    <!-- Completed Example -->
+                    <div class="task-item glass-panel completed">
+                        <div class="checkbox-custom"><i class="fa-solid fa-check"></i></div>
+                        <div style="flex: 1;">
+                            <h4 style="margin-bottom: 4px;">Register for Hackathon</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Completed Yesterday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Button -->
+            <button id="ai-toggle" class="ai-fab flex-center"><i class="fa-solid fa-sparkles"></i></button>
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i><span style="font-weight: 600;">EduBot
+                            Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">I can remind you of your tasks. Just ask!</div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        // Simple toggle for checkbox visualization in this static demo
+        document.querySelectorAll('.checkbox-custom').forEach(box => {
+            box.addEventListener('click', function () {
+                const item = this.parentElement;
+                item.classList.toggle('completed');
+            });
+        });
+    </script>
+</body>
+
+</html>

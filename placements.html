@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Placements</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .company-card {
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .job-details {
+            flex: 1;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .apply-btn {
+            background: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .apply-btn:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i
+                            class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li class="nav-item"><a href="attendance.html" class="nav-link"><i
+                            class="fa-regular fa-calendar-check"></i><span>Attendance</span></a></li>
+                <li class="nav-item"><a href="marks.html" class="nav-link"><i
+                            class="fa-solid fa-chart-simple"></i><span>Marks & CGPA</span></a></li>
+                <li class="nav-item"><a href="lectures.html" class="nav-link"><i
+                            class="fa-solid fa-person-chalkboard"></i><span>Lectures</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link"><i
+                            class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link active"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>Placement Cell</h1>
+                    <p>Opportunities knocking at your door.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn flex-center"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                            alt="User" /></div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="glass-panel stat-card">
+                    <h3>Companies Visiting</h3>
+                    <div class="stat-value text-gradient">15</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">This Month</p>
+                </div>
+                <div class="glass-panel stat-card">
+                    <h3>Your Applications</h3>
+                    <div class="stat-value">3</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">1 Shortlisted</p>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="section-header">
+                    <h2>Live Openings</h2>
+                </div>
+
+                <!-- Job 1 -->
+                <div class="glass-panel company-card">
+                    <div class="company-logo"><i class="fa-brands fa-google" style="color: #DB4437;"></i></div>
+                    <div class="job-details">
+                        <h3 style="font-size: 1.1rem;">Google</h3>
+                        <p style="color: var(--text-muted);">Software Engineering Intern</p>
+                        <div class="tags">
+                            <span class="tag">Bangalore</span>
+                            <span class="tag">Stipend: ₹80k/mo</span>
+                            <span class="tag">Remote Possible</span>
+                        </div>
+                    </div>
+                    <button class="btn apply-btn" style="padding: 10px 20px; font-weight: 600;">Apply Now</button>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="glass-panel company-card">
+                    <div class="company-logo"><i class="fa-brands fa-microsoft" style="color: #00A4EF;"></i></div>
+                    <div class="job-details">
+                        <h3 style="font-size: 1.1rem;">Microsoft</h3>
+                        <p style="color: var(--text-muted);">Data Science Associate</p>
+                        <div class="tags">
+                            <span class="tag">Hyderabad</span>
+                            <span class="tag">CTC: 24 LPA</span>
+                        </div>
+                    </div>
+                    <button class="btn apply-btn" style="padding: 10px 20px; font-weight: 600;">Apply Now</button>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="glass-panel company-card">
+                    <div class="company-logo"><i class="fa-brands fa-amazon" style="color: #FF9900;"></i></div>
+                    <div class="job-details">
+                        <h3 style="font-size: 1.1rem;">Amazon</h3>
+                        <p style="color: var(--text-muted);">SDE - I</p>
+                        <div class="tags">
+                            <span class="tag">Gurgaon</span>
+                            <span class="tag">CTC: 28 LPA</span>
+                        </div>
+                    </div>
+                    <button class="btn apply-btn" style="padding: 10px 20px; font-weight: 600;">Apply Now</button>
+                </div>
+            </div>
+
+            <!-- AI Button -->
+            <button id="ai-toggle" class="ai-fab flex-center"><i class="fa-solid fa-sparkles"></i></button>
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i><span style="font-weight: 600;">EduBot
+                            Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">Need interview tips or company info? Ask away!</div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

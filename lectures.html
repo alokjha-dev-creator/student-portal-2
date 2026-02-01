@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Lectures</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timetable-grid {
+            display: grid;
+            grid-template-columns: 100px repeat(5, 1fr);
+            /* Time + 5 Days */
+            gap: 12px;
+            overflow-x: auto;
+            min-width: 800px;
+            /* Ensure specific width for scroll */
+        }
+
+        .time-col {
+            text-align: right;
+            padding-right: 16px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .day-header {
+            text-align: center;
+            font-weight: 600;
+            padding-bottom: 16px;
+            color: var(--color-primary-light);
+        }
+
+        .class-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .class-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.02);
+        }
+
+        .class-card.active {
+            border-color: var(--color-primary);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .subject-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i
+                            class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li class="nav-item"><a href="attendance.html" class="nav-link"><i
+                            class="fa-regular fa-calendar-check"></i><span>Attendance</span></a></li>
+                <li class="nav-item"><a href="marks.html" class="nav-link"><i
+                            class="fa-solid fa-chart-simple"></i><span>Marks & CGPA</span></a></li>
+                <li class="nav-item"><a href="lectures.html" class="nav-link active"><i
+                            class="fa-solid fa-person-chalkboard"></i><span>Lectures</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link"><i
+                            class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>Weekly Schedule</h1>
+                    <p>Plan your week efficiently.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn flex-center"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                            alt="User" /></div>
+                </div>
+            </header>
+
+            <div class="glass-panel" style="padding: 24px;">
+                <div class="timetable-grid">
+                    <!-- Headers -->
+                    <div></div> <!-- Empty top-left -->
+                    <div class="day-header">Monday</div>
+                    <div class="day-header">Tuesday</div>
+                    <div class="day-header">Wednesday</div>
+                    <div class="day-header">Thursday</div>
+                    <div class="day-header">Friday</div>
+
+                    <!-- 09:00 Row -->
+                    <div class="time-col">09:00 AM</div>
+                    <div class="class-card">
+                        <span class="subject-name">DBMS</span>
+                        <span>Room 302</span>
+                    </div>
+                    <div class="class-card"></div>
+                    <div class="class-card">
+                        <span class="subject-name">Algorithm</span>
+                        <span>Room 401</span>
+                    </div>
+                    <div class="class-card">
+                        <span class="subject-name">Physics</span>
+                        <span>Lab 1</span>
+                    </div>
+                    <div class="class-card">
+                        <span class="subject-name">DBMS</span>
+                        <span>Room 302</span>
+                    </div>
+
+                    <!-- 10:00 Row -->
+                    <div class="time-col">10:00 AM</div>
+                    <div class="class-card">
+                        <span class="subject-name">Maths IV</span>
+                        <span>Room 101</span>
+                    </div>
+                    <div class="class-card">
+                        <span class="subject-name">Physics</span>
+                        <span>Lab 1</span>
+                    </div>
+                    <div class="class-card"></div>
+                    <div class="class-card">
+                        <span class="subject-name">Web Tech</span>
+                        <span>Lab 2</span>
+                    </div>
+                    <div class="class-card">
+                        <span class="subject-name">Maths IV</span>
+                        <span>Room 101</span>
+                    </div>
+
+                    <!-- Break -->
+                    <div class="time-col">12:00 PM</div>
+                    <div
+                        style="grid-column: span 5; text-align: center; color: var(--text-muted); font-style: italic; padding: 10px;">
+                        Lunch Break 🍔</div>
+
+                    <!-- 01:00 Row -->
+                    <div class="time-col">01:00 PM</div>
+                    <div class="class-card active">
+                        <span class="subject-name">Operating Sys</span>
+                        <span>Room 205</span>
+                    </div>
+                    <div class="class-card">
+                        <span class="subject-name">Maths IV</span>
+                        <span>Room 101</span>
+                    </div>
+                    <div class="class-card">
+                        <span class="subject-name">DBMS Lab</span>
+                        <span>Lab 3</span>
+                    </div>
+                    <div class="class-card"></div>
+                    <div class="class-card">
+                        <span class="subject-name">Soft Skills</span>
+                        <span>Auditorium</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- AI Button -->
+            <button id="ai-toggle" class="ai-fab flex-center"><i class="fa-solid fa-sparkles"></i></button>
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i><span style="font-weight: 600;">EduBot
+                            Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">Need to know your next class? Ask me!</div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

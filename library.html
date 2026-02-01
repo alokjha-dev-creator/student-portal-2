@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary-light);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--color-primary-light);
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .book-card {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .book-cover {
+            height: 180px;
+            background: #2d3748;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i
+                            class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li class="nav-item"><a href="attendance.html" class="nav-link"><i
+                            class="fa-regular fa-calendar-check"></i><span>Attendance</span></a></li>
+                <li class="nav-item"><a href="marks.html" class="nav-link"><i
+                            class="fa-solid fa-chart-simple"></i><span>Marks & CGPA</span></a></li>
+                <li class="nav-item"><a href="lectures.html" class="nav-link"><i
+                            class="fa-solid fa-person-chalkboard"></i><span>Lectures</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link"><i
+                            class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link active"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>Digital Library</h1>
+                    <p>Access books, notes, and previous year papers.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn flex-center"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                            alt="User" /></div>
+                </div>
+            </header>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('books')">E-Books</button>
+                <button class="tab-btn" onclick="showTab('pyqs')">PYQs (Papers)</button>
+            </div>
+
+            <!-- Books Tab -->
+            <div id="books" class="tab-content">
+                <div class="resource-grid">
+                    <div class="glass-panel book-card">
+                        <div class="book-cover"><i class="fa-solid fa-database"></i></div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Database System Concepts</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Korth & Silberschatz</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; padding: 6px;">Read</button>
+                    </div>
+
+                    <div class="glass-panel book-card">
+                        <div class="book-cover"><i class="fa-brands fa-js"></i></div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Eloquent JavaScript</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Marijn Haverbeke</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; padding: 6px;">Read</button>
+                    </div>
+
+                    <div class="glass-panel book-card">
+                        <div class="book-cover"><i class="fa-solid fa-microchip"></i></div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Digital Electronics</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Morris Mano</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; padding: 6px;">Read</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PYQs Tab (Hidden by default) -->
+            <div id="pyqs" class="tab-content" style="display: none;">
+                <div class="table-container glass-panel" style="padding: 16px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Year</th>
+                                <th>Semester</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DBMS End Sem</td>
+                                <td>2023</td>
+                                <td>5th</td>
+                                <td><button class="btn btn-sm"><i class="fa-solid fa-download"></i> PDF</button></td>
+                            </tr>
+                            <tr>
+                                <td>Operating Systems</td>
+                                <td>2023</td>
+                                <td>5th</td>
+                                <td><button class="btn btn-sm"><i class="fa-solid fa-download"></i> PDF</button></td>
+                            </tr>
+                            <tr>
+                                <td>Maths IV</td>
+                                <td>2022</td>
+                                <td>4th</td>
+                                <td><button class="btn btn-sm"><i class="fa-solid fa-download"></i> PDF</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- AI Button -->
+            <button id="ai-toggle" class="ai-fab flex-center"><i class="fa-solid fa-sparkles"></i></button>
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i><span style="font-weight: 600;">EduBot
+                            Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">Need a specific book or paper? Just ask.</div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

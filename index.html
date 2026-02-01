@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Dashboard</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="attendance.html" class="nav-link">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Attendance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="marks.html" class="nav-link">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Marks & CGPA</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="lectures.html" class="nav-link">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                        <span>Lectures</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="tasks.html" class="nav-link">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+
+            <div class="user-mini-profile">
+                <!-- Bottom profile or settings could go here -->
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>Hello, Student! 👋</h1>
+                    <p>"Believe you can and you're halfway there."</p>
+                </div>
+
+                <div class="user-profile">
+                    <button class="notification-btn flex-center">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="User" />
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Widgets Container -->
+            <div id="dashboard-content">
+
+                <!-- Stats Grid -->
+                <div class="dashboard-grid">
+                    <div class="glass-panel stat-card">
+                        <h3>Attendance</h3>
+                        <div class="stat-value text-gradient">85%</div>
+                        <div class="stat-trend trend-up">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+2% this week</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel stat-card">
+                        <h3>CGPA</h3>
+                        <div class="stat-value">9.2</div>
+                        <div class="stat-trend">
+                            <i class="fa-solid fa-medal text-warning"></i>
+                            <span>Top 5% of class</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel stat-card">
+                        <h3>Pending Tasks</h3>
+                        <div class="stat-value">4</div>
+                        <div class="stat-trend trend-down">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>2 Due Tomorrow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Split Sections -->
+                <div class="dashboard-sections">
+
+                    <!-- Daily Schedule -->
+                    <div class="schedule-section">
+                        <div class="section-header">
+                            <h2>Today's Schedule</h2>
+                            <button class="btn btn-sm" style="color: var(--color-primary-light);">View All</button>
+                        </div>
+
+                        <div class="glass-panel">
+                            <div class="lecture-item">
+                                <div class="lecture-time">09:00</div>
+                                <div class="lecture-info">
+                                    <h4>Database Management Systems</h4>
+                                    <p>Prof. R. Gupta • Room 302</p>
+                                </div>
+                                <span class="status-badge">Completed</span>
+                            </div>
+
+                            <div class="lecture-item">
+                                <div class="lecture-time">11:00</div>
+                                <div class="lecture-info">
+                                    <h4>Web Technologies</h4>
+                                    <p>Prof. Sarah J. • Lab 2</p>
+                                </div>
+                                <span class="status-badge upcoming">Now</span>
+                            </div>
+
+                            <div class="lecture-item">
+                                <div class="lecture-time">02:00</div>
+                                <div class="lecture-info">
+                                    <h4>Algorithm Design</h4>
+                                    <p>Prof. K. Kumar • Room 104</p>
+                                </div>
+                                <span class="status-badge">Upcoming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Deadlines / Notices -->
+                    <div class="deadlines-section">
+                        <div class="section-header">
+                            <h2>Upcoming</h2>
+                        </div>
+                        <div class="glass-panel"
+                            style="padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+                            <div class="deadline-item" style="display: flex; gap: 12px; align-items: flex-start;">
+                                <div
+                                    style="background: rgba(239, 68, 68, 0.2); color: var(--color-danger); padding: 8px; border-radius: 8px;">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem;">DBMS Project Submission</h4>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">Due Tomorrow, 11:59 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="deadline-item" style="display: flex; gap: 12px; align-items: flex-start;">
+                                <div
+                                    style="background: rgba(245, 158, 11, 0.2); color: var(--color-secondary); padding: 8px; border-radius: 8px;">
+                                    <i class="fa-solid fa-flask"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem;">Physics Lab Record</h4>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">Due Friday</p>
+                                </div>
+                            </div>
+
+                            <div
+                                style="margin-top: auto; padding-top: 10px; border-top: 1px solid var(--glass-border);">
+                                <h4 style="font-size: 0.9rem; margin-bottom: 8px;">Recent Placement News</h4>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Google Cloud is hiring for
+                                    Internship roles. Apply before 20th.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI Assistant Floating Button -->
+            <button id="ai-toggle" class="ai-fab flex-center">
+                <i class="fa-solid fa-sparkles"></i>
+            </button>
+
+            <!-- AI Chat Interface -->
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i>
+                        <span style="font-weight: 600;">EduBot Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">
+                        Hello! I'm your AI assistant. Ask me about your attendance, tasks, or upcoming lectures! 🎓
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

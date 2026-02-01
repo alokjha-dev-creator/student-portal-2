@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Teachers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .teacher-card {
+            text-align: center;
+            padding: 32px 24px;
+        }
+
+        .teacher-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            border: 3px solid var(--color-primary);
+            padding: 2px;
+        }
+
+        .teacher-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i
+                            class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li class="nav-item"><a href="attendance.html" class="nav-link"><i
+                            class="fa-regular fa-calendar-check"></i><span>Attendance</span></a></li>
+                <li class="nav-item"><a href="marks.html" class="nav-link"><i
+                            class="fa-solid fa-chart-simple"></i><span>Marks & CGPA</span></a></li>
+                <li class="nav-item"><a href="lectures.html" class="nav-link"><i
+                            class="fa-solid fa-person-chalkboard"></i><span>Lectures</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link"><i
+                            class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link active"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>Faculty Members</h1>
+                    <p>Connect with your mentors.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn flex-center"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                            alt="User" /></div>
+                </div>
+            </header>
+
+            <div class="teacher-grid">
+                <!-- Teacher 1 -->
+                <div class="glass-panel teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://ui-avatars.com/api/?name=Rakesh+Gupta&background=0D8ABC&color=fff"
+                            alt="Teacher">
+                    </div>
+                    <h3 style="margin-bottom: 4px;">Prof. Rakesh Gupta</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">HOD, Computer Science</p>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--color-primary-light);">DBMS, Data
+                        Structures</p>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Message</button>
+                        <button class="btn"
+                            style="background: rgba(255,255,255,0.1); font-size: 0.85rem;">Profile</button>
+                    </div>
+                </div>
+
+                <!-- Teacher 2 -->
+                <div class="glass-panel teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=6366f1&color=fff"
+                            alt="Teacher">
+                    </div>
+                    <h3 style="margin-bottom: 4px;">Dr. Sarah Jenkins</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Associate Professor</p>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--color-primary-light);">Web Technologies,
+                        AI</p>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Message</button>
+                        <button class="btn"
+                            style="background: rgba(255,255,255,0.1); font-size: 0.85rem;">Profile</button>
+                    </div>
+                </div>
+
+                <!-- Teacher 3 -->
+                <div class="glass-panel teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://ui-avatars.com/api/?name=Kunal+Kumar&background=f59e0b&color=fff"
+                            alt="Teacher">
+                    </div>
+                    <h3 style="margin-bottom: 4px;">Prof. Kunal Kumar</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Assistant Professor</p>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--color-primary-light);">Algorithms, Maths
+                    </p>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Message</button>
+                        <button class="btn"
+                            style="background: rgba(255,255,255,0.1); font-size: 0.85rem;">Profile</button>
+                    </div>
+                </div>
+
+                <!-- Teacher 4 -->
+                <div class="glass-panel teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://ui-avatars.com/api/?name=Anita+Roy&background=10b981&color=fff" alt="Teacher">
+                    </div>
+                    <h3 style="margin-bottom: 4px;">Dr. Anita Roy</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Lab In-charge</p>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--color-primary-light);">Physics,
+                        Electronics</p>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Message</button>
+                        <button class="btn"
+                            style="background: rgba(255,255,255,0.1); font-size: 0.85rem;">Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Button -->
+            <button id="ai-toggle" class="ai-fab flex-center"><i class="fa-solid fa-sparkles"></i></button>
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i><span style="font-weight: 600;">EduBot
+                            Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">Need to find a teacher? I can help!</div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

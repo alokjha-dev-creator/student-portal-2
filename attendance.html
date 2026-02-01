@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar (Copied for static site) -->
+        <aside class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap text-gradient"></i>
+                <span>EduVibe</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i
+                            class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li class="nav-item"><a href="attendance.html" class="nav-link active"><i
+                            class="fa-regular fa-calendar-check"></i><span>Attendance</span></a></li>
+                <li class="nav-item"><a href="marks.html" class="nav-link"><i
+                            class="fa-solid fa-chart-simple"></i><span>Marks & CGPA</span></a></li>
+                <li class="nav-item"><a href="lectures.html" class="nav-link"><i
+                            class="fa-solid fa-person-chalkboard"></i><span>Lectures</span></a></li>
+                <li class="nav-item"><a href="tasks.html" class="nav-link"><i
+                            class="fa-solid fa-list-check"></i><span>Tasks</span></a></li>
+                <li class="nav-item"><a href="teachers.html" class="nav-link"><i
+                            class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i
+                            class="fa-solid fa-book"></i><span>Library</span></a></li>
+                <li class="nav-item"><a href="placements.html" class="nav-link"><i
+                            class="fa-solid fa-briefcase"></i><span>Placements</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="welcome-text">
+                    <h1>Attendance Overview</h1>
+                    <p>Keep track of your academic presence.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn flex-center"><i class="fa-regular fa-bell"></i></button>
+                    <div class="avatar"><img src="https://ui-avatars.com/api/?name=John+Doe&background=random"
+                            alt="User" /></div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Overall Attendance -->
+                <div class="glass-panel stat-card" style="align-items: center; text-align: center;">
+                    <h3>Overall Attendance</h3>
+                    <div class="circular-progress"
+                        style="background: conic-gradient(var(--color-success) 306deg, rgba(255,255,255,0.1) 0deg);">
+                        <div class="circular-value">85%</div>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--color-success);">Safe Zone</p>
+                </div>
+
+                <!-- Total Classes -->
+                <div class="glass-panel stat-card">
+                    <h3>Total Lectures Delivered</h3>
+                    <div class="stat-value">120</div>
+                    <div class="stat-trend trend-up">
+                        <i class="fa-solid fa-check"></i>
+                        <span>You attended 102</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="padding: 24px; margin-top: 32px;">
+                <div class="section-header">
+                    <h2>Subject-wise Breakdown</h2>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Classes Highheld</th>
+                                <th>Attended</th>
+                                <th>Percentage</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Database Management Systems (DBMS)</td>
+                                <td>40</td>
+                                <td>36</td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span style="min-width: 40px;">90%</span>
+                                        <div class="progress-container" style="width: 100px; margin-top: 0;">
+                                            <div class="progress-bar success" style="width: 90%;"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge"
+                                        style="background: rgba(16, 185, 129, 0.2); color: var(--color-success);">Excellent</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Operating Systems</td>
+                                <td>38</td>
+                                <td>28</td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span style="min-width: 40px;">73%</span>
+                                        <div class="progress-container" style="width: 100px; margin-top: 0;">
+                                            <div class="progress-bar warning" style="width: 73%;"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge"
+                                        style="background: rgba(245, 158, 11, 0.2); color: var(--color-secondary);">Warning</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Web Technologies</td>
+                                <td>25</td>
+                                <td>24</td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span style="min-width: 40px;">96%</span>
+                                        <div class="progress-container" style="width: 100px; margin-top: 0;">
+                                            <div class="progress-bar success" style="width: 96%;"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge"
+                                        style="background: rgba(16, 185, 129, 0.2); color: var(--color-success);">Excellent</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics IV</td>
+                                <td>42</td>
+                                <td>20</td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <span style="min-width: 40px;">47%</span>
+                                        <div class="progress-container" style="width: 100px; margin-top: 0;">
+                                            <div class="progress-bar danger" style="width: 47%;"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge"
+                                        style="background: rgba(239, 68, 68, 0.2); color: var(--color-danger);">Critical</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- AI Button Reuse -->
+            <button id="ai-toggle" class="ai-fab flex-center"><i class="fa-solid fa-sparkles"></i></button>
+            <div id="ai-chat" class="glass-panel ai-chat-window">
+                <!-- Chat structure same as index.html, filled by JS generally but static here needs duplicated structure or smarter JS -->
+                <div class="chat-header">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-robot text-gradient"></i><span style="font-weight: 600;">EduBot
+                            Assistant</span>
+                    </div>
+                    <button id="ai-close"
+                        style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="chat-body" id="chat-messages">
+                    <div class="message bot">Hello! Ask me about your attendance stats.</div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask something...">
+                    <button id="chat-send" class="btn btn-primary" style="padding: 8px 12px;"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
